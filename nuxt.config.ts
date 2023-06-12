@@ -6,5 +6,11 @@ export default defineNuxtConfig({
     // 'github:Web3Hacker-World/bs-craft#v0.0.1', // require to setup GIGET_AUTH=<token>
   ],
   modules: [
-  ]
+    'nuxt-mongoose',
+  ],
+  mongoose: {
+    uri: process.env.MONGODB_URI,
+    options: {},
+    modelsDir: 'models',
+  },
 })
